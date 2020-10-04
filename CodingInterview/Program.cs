@@ -2,11 +2,21 @@
 
 namespace CodingInterview
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World! Line 1");
+            ReverseSubList();
+        }
+
+        private static void ReverseSubList()
+        {
+            var obj = new ReverseSubList();
+            var head = obj.CreateLL();
+            Console.WriteLine("before reverse:");
+            obj.PrintLL(head);
+            Console.WriteLine("after reverse:");
+            obj.PrintLL(obj.ReverseSubListFunction(head, 2, 10));
         }
     }
 }
